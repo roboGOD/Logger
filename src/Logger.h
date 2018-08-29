@@ -26,6 +26,11 @@ public:
     {
         m_log_level = level;
     }
+    ~Log()
+    {
+        // Do stuff when destroying the object.
+        // You can uninitialize objects here.
+    }
     void SetLogLevel(LogLevel level);
     void Error(const char* message);
     void Warn(const char* message);
