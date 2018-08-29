@@ -1,26 +1,26 @@
 #include <iostream>
 #include "Logger.h"
 
-void Log::SetLogLevel(int level)
+void Log::SetLogLevel(LogLevel level)
 {
     m_log_level = level;
 }
 
 void Log::Error(const char* message)
 {
-    if(m_log_level >= LogLevelError)
+    if(m_log_level >= Log::LevelError)
         std::cout << "[Error] " << message << std::endl;
 }
 
 void Log::Warn(const char* message)
 {
-    if(m_log_level >= LogLevelWarn)
+    if(m_log_level >= Log::LevelWarn)
         std::cout << "[Warn] " << message << std::endl;
 }
 
 void Log::Info(const char* message)
 {
-    if(m_log_level >= LogLevelInfo)
+    if(m_log_level >= Log::LevelInfo)
         std::cout << "[Info] " << message << std::endl;
 }
 
